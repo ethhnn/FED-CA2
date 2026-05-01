@@ -1,0 +1,961 @@
+/* ====================================================================
+   ECOFUTURE CLIMATE ACTION WEBSITE - MAIN STYLESHEET
+   ====================================================================
+   This stylesheet contains all styling for the EcoFuture website
+   including color schemes, layout, components, and responsive design
+   ====================================================================
+*/
+
+/* ====================================================================
+   1. CSS CUSTOM PROPERTIES (CSS VARIABLES)
+   ====================================================================
+   Global color scheme and design tokens for consistent theming
+*/
+:root {
+    /* PRIMARY COLORS - Main Brand Identity */
+    --primary-green: #198754;      /* Bootstrap success green - main brand color */
+    --light-green: #20c997;        /* Bootstrap teal - secondary green accent */
+    --dark-green: #146c43;         /* Darker green for hover states */
+    
+    /* ACCENT COLORS - Call-to-Action & Highlights */
+    --warning-orange: #ffc107;     /* Bootstrap warning yellow/orange - CTAs */
+    --danger-red: #dc3545;         /* Bootstrap danger red - urgent/critical info */
+    --info-blue: #0dcaf0;          /* Bootstrap info cyan - informational elements */
+    --primary-blue: #0d6efd;       /* Bootstrap primary blue - links/secondary CTAs */
+    
+    /* NEUTRAL COLORS - Text & Backgrounds */
+    --white: #ffffff;              /* Pure white - main background */
+    --light-gray: #f8f9fa;         /* Bootstrap light - section backgrounds */
+    --medium-gray: #6c757d;        /* Bootstrap secondary - muted text */
+    --dark-gray: #343a40;          /* Bootstrap dark - main text */
+    --black: #000000;              /* Pure black - footer/contrast */
+    
+    /* SEMANTIC COLORS - Status & Feedback */
+    --success-green: #198754;      /* Same as primary - success messages */
+    --error-red: #dc3545;          /* Same as danger - error states */
+    --warning-amber: #ffc107;      /* Same as warning - caution/alerts */
+    --info-cyan: #0dcaf0;          /* Same as info - informational messages */
+}
+
+/* ====================================================================
+   2. GLOBAL STYLES & BASE ELEMENTS
+   ====================================================================
+   Global page styling, typography, and base element styles
+*/
+
+/* Page Load Animation */
+body {
+    opacity: 0;
+    animation: fadeInPage 0.7s forwards ease-in;
+}
+
+@keyframes fadeInPage {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Typography Hierarchy */
+h1 {
+    font-weight: 900;
+}
+
+h2 {
+    color: var(--success-green);
+    display: inline-block;
+    border-bottom: 4px solid #9FE2BF;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+/* ====================================================================
+   3. NAVIGATION STYLES
+   ====================================================================
+   Header navigation bar styling and responsive behavior
+*/
+.navbar {
+    background: white;
+    border-bottom: 3px solid #9FE2BF;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-brand i {
+    color: var(--success-green) !important;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand i:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.navbar .nav-link {
+    color: var(--success-green) !important;
+}
+
+.navbar .nav-link:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* ====================================================================
+   4. HERO BANNER STYLES
+   ====================================================================
+   Main hero section with background image and overlay text
+*/
+.indexbanner {
+    background: url(../pictures/pexels-iriser-1090977.jpg) no-repeat center center fixed;/*https://www.pexels.com/photo/macro-photograph-of-grass-1090977/*/
+    background-size: cover;
+    color: white;
+    font-size: larger;
+    min-height: 300px;
+}
+
+.highlight {
+    color: #9FE2BF;
+}
+
+/* ====================================================================
+   5. BUTTON STYLES
+   ====================================================================
+   Global button styling with hover effects and transitions
+*/
+.btn {
+    background-color: #9FE2BF;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: none !important;
+}
+
+.btn:hover {
+    background-color: #218838;
+    transform: scale(1.03);
+}
+
+.btn:active {
+    background-color: #1e7e34;
+    transform: scale(0.97);
+}
+
+/* ====================================================================
+   6. STATISTICS SECTION STYLES
+   ====================================================================
+   Climate statistics cards and progress indicators
+*/
+.currentstate {
+    border-top: 3px solid #9FE2BF;
+}
+
+/* Card Hover Animation */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card {
+    background-color: var(--light-gray);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Statistics Number Styling */
+.stat-number,
+.card-body > div:first-child {
+    color: #198754;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+    height: 100%;
+    transition: width 0.4s ease;
+}
+
+.progress-bar.temp {
+    width: 55%;
+    background-color: #dc3545; /* red */
+}
+
+.progress-bar.co2 {
+    width: 75%;
+    background-color: #343a40; /* dark gray */
+}
+
+.progress-bar.renewable {
+    width: 29%;
+    background-color: #ffc107; /* yellow */
+}
+
+.progress-bar.activists {
+    width: 60%;
+    background-color: #198754; /* green */
+}
+
+/* ====================================================================
+   7. CAROUSEL STYLES
+   ====================================================================
+   Inspirational quotes carousel with custom navigation icons
+*/
+.carousel-control-prev-icon {
+    background-image: url(../pictures/arrow-bar-left.svg);
+}/*https://icons.getbootstrap.com/icons/arrow-bar-left/*/
+
+.carousel-control-next-icon {
+    background-image: url(../pictures/arrow-bar-right.svg);
+}/*https://icons.getbootstrap.com/icons/arrow-bar-right/*/
+
+.carousel-bg {
+    background-color: var(--light-gray);
+    color: #155724;
+    font-family: 'Georgia', serif;
+    font-style: normal;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+}
+
+.carousel-bg q {
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 0.75rem;
+    color: #1b4332;
+}
+
+.carousel-bg footer {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #0b2e13;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* ====================================================================
+   8. MISSION SECTION STYLES
+   ====================================================================
+   Mission statement and accordion component styling
+*/
+.mission {
+    background-color: white;
+}
+
+.mission h1 {
+    color: var(--success-green);
+}
+
+/* Accordion Styles */
+.accordion-header button {
+    background-color: #e9f5e9;
+    color: var(--success-green);
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    box-shadow: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-header button:hover,
+.accordion-header button:focus {
+    background-color: #c7e5c7;
+    color: #1e3d1e;
+    outline: none;
+}
+
+.accordion-header button:not(.collapsed) {
+    background-color: #146c43;
+    color: white;
+}
+
+.accordion-body {
+    background-color: #f7faf7;
+    color: #3b3b3b;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-left: 4px solid #146c43;
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.accordion-item {
+    border: none;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ====================================================================
+   9. TAB NAVIGATION STYLES
+   ====================================================================
+   Information page tab navigation component
+*/
+.nav-tabs {
+    background-color: #e6f4ea;
+    border-bottom: 2px solid #a3d9a5;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.nav-tabs .nav-link {
+    color: #2e7d32;
+    border: none;
+    background-color: transparent;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #c8e6c9;
+    color: #1b5e20;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #66bb6a;
+    color: white;
+    font-weight: 600;
+}
+
+/* ====================================================================
+   10. INFORMATION CARDS STYLES
+   ====================================================================
+   Climate insights, statistics, and informational card components
+*/
+
+/* Statistics Cards */
+.stats .card.h-100 {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.stats .card.h-100:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stats .card-header {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: white;
+}
+
+/* Problem Card - Red Theme */
+.stats .col-lg-4:nth-child(1) .card-header {
+    background-color: #d32f2f;
+}
+
+/* Solutions Card - Yellow/Orange Theme */
+.stats .col-lg-4:nth-child(2) .card-header {
+    background-color: #fbc02d;
+    color: #333;
+}
+
+/* Progress Card - Green Theme */
+.stats .col-lg-4:nth-child(3) .card-header {
+    background-color: #388e3c;
+}
+
+.stats .card-body h5 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.stats ul.list-unstyled li {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* ====================================================================
+   11. CLIMATE IMPACT NUMBERS STYLES
+   ====================================================================
+   Animated statistics cards with count-up numbers
+*/
+.statstwo {
+    background-color: var(--light-gray);
+}
+
+.statstwo .card {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    border-radius: 0.75rem;
+    background-color: #fff;
+}
+
+.statstwo .card:hover {
+    transform: translateY(-5px);
+}
+
+.statstwo .card-img-top {
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+.statstwo .card-title {
+    font-size: 2rem;
+    color: #2e7d32;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.statstwo .card-text {
+    color: #444;
+    font-size: 1rem;
+}
+
+/* ====================================================================
+   12. REGIONAL IMPACTS STYLES
+   ====================================================================
+   Regional climate impact cards with color-coded headers
+*/
+.regional-impacts .card {
+    background-color: #fefefe;
+    border: 1.5px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.regional-impacts .card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+}
+
+/* Regional Card Headers with Different Color Themes */
+.regional-impacts .col-md-6:nth-child(1) .card-header {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #1e40af;
+}
+
+.regional-impacts .col-md-6:nth-child(2) .card-header {
+    background: linear-gradient(135deg, #059669, #047857);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #065f46;
+}
+
+.regional-impacts .col-md-6:nth-child(3) .card-header {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #991b1b;
+}
+
+.regional-impacts .col-md-6:nth-child(4) .card-header {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #5b21b6;
+}
+
+.regional-impacts .card-body ul {
+    color: #374151;
+    font-weight: 500;
+    font-size: 0.95rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.regional-impacts .card-body ul li {
+    line-height: 1.4;
+}
+
+.regional-impacts .card-body ul li strong {
+    font-weight: 700;
+    color: #059669;
+}
+
+.regional-impacts .card-body ul li:hover {
+    color: #1f2937;
+    cursor: default;
+    transition: color 0.2s ease;
+}
+
+/* ====================================================================
+   13. GLOBAL SUCCESS STORIES STYLES
+   ====================================================================
+   Interactive world map with clickable hotspots and information panel
+*/
+.global-success {
+    background-color: var(--light-gray);
+}
+
+/* Interactive Hotspots */
+.hotspot {
+    position: absolute;
+    background-color: #81c784;
+    border: 2px solid #1b5e20;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(129, 199, 132, 0.8);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    outline: none;
+    padding: 0;
+    color: transparent;
+}
+
+.hotspot:hover,
+.hotspot:focus {
+    background-color: #4caf50;
+    box-shadow: 0 0 14px rgba(76, 175, 80, 0.9);
+    transform: scale(1.4);
+}
+
+.hotspot:active {
+    background-color: #1b5e20;
+    box-shadow: 0 0 6px rgba(27, 94, 32, 0.8);
+    transform: scale(1.1);
+    transition: none;
+}
+
+/* Hotspot Positions on World Map */
+.hotspot-costa-rica { top: 50%; left: 23%; }
+.hotspot-denmark { top: 23%; left: 49%; }
+.hotspot-copenhagen { top: 23%; left: 51%; }
+.hotspot-ethiopia { top: 50%; left: 58%; }
+.hotspot-morocco { top: 40%; left: 45%; }
+
+/* Information Details Panel */
+#details {
+    background-color: #f9f9f9;
+    color: #2d3748;
+    border: 2px solid #e2e8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    user-select: text;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+#details h4 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #1a202c;
+    text-shadow: none;
+}
+
+#details p,
+#details ul,
+#details li {
+    color: #4a5568;
+}
+
+#details strong {
+    color: #059669;
+    font-weight: 700;
+}
+
+#details li {
+    font-size: 1rem;
+}
+
+/* ====================================================================
+   14. FUTURE DEVELOPMENTS STYLES
+   ====================================================================
+   Future technology cards, timeline, and action items styling
+*/
+.future {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.future h2,
+.future h3,
+.future h4,
+.future h5 {
+    font-weight: 700;
+}
+
+.future p,
+.future li {
+    line-height: 1.5;
+    color: #2d3748;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.future strong {
+    font-weight: 700;
+    color: #16a085;
+}
+
+.future a {
+    color: #16a085;
+    transition: color 0.2s ease;
+}
+
+.future a:hover,
+.future a:focus {
+    color: #0d8570;
+}
+
+/* Future Content Cards */
+.future .card {
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    transition: border-color 0.3s ease;
+}
+
+.future .card:hover {
+    border-color: #cbd5e1;
+}
+
+/* Emerging Technologies Card - Green Theme */
+.future .row:nth-child(2) .col-md-6:nth-child(1) .card-title {
+    color: #059669;
+}
+
+.future .row:nth-child(2) .col-md-6:nth-child(1) .card {
+    border-color: #a7f3d0;
+}
+
+/* Policy & Finance Card - Blue Theme */
+.future .row:nth-child(2) .col-md-6:nth-child(2) .card-title {
+    color: #2563eb;
+}
+
+.future .row:nth-child(2) .col-md-6:nth-child(2) .card {
+    border-color: #bfdbfe;
+}
+
+/* Timeline Cards - Color Coding by Time Period */
+.future .row:nth-child(4) .col-md-3:nth-child(1) .card {
+    background-color: #fef3c7;
+    border-color: #fbbf24;
+}
+
+.future .row:nth-child(4) .col-md-3:nth-child(1) strong {
+    color: #d97706;
+}
+
+.future .row:nth-child(4) .col-md-3:nth-child(2) .card {
+    background-color: #dbeafe;
+    border-color: #60a5fa;
+}
+
+.future .row:nth-child(4) .col-md-3:nth-child(2) strong {
+    color: #2563eb;
+}
+
+.future .row:nth-child(4) .col-md-3:nth-child(3) .card {
+    background-color: #d1fae5;
+    border-color: #6ee7b7;
+}
+
+.future .row:nth-child(4) .col-md-3:nth-child(3) strong {
+    color: #059669;
+}
+
+.future .row:nth-child(4) .col-md-3:nth-child(4) .card {
+    background-color: #ede9fe;
+    border-color: #a78bfa;
+}
+
+.future .row:nth-child(4) .col-md-3:nth-child(4) strong {
+    color: #7c3aed;
+}
+
+/* Action Cards Styling */
+.future .row:last-child .col-md-4:nth-child(1) h4 {
+    color: #059669;
+}
+
+.future .row:last-child .col-md-4:nth-child(1) .card {
+    background-color: #f0fdf4;
+    border-color: #bbf7d0;
+}
+
+.future .row:last-child .col-md-4:nth-child(2) h4 {
+    color: #ea580c;
+}
+
+.future .row:last-child .col-md-4:nth-child(2) .card {
+    background-color: #fff7ed;
+    border-color: #fed7aa;
+}
+
+.future .row:last-child .col-md-4:nth-child(3) h4 {
+    color: #7c3aed;
+}
+
+.future .row:last-child .col-md-4:nth-child(3) .card {
+    background-color: #faf5ff;
+    border-color: #ddd6fe;
+}
+
+.future h4 {
+    font-size: 1.3rem;
+}
+
+.future h5 {
+    color: #4a5568;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.future ul li:hover {
+    color: #1a202c;
+    cursor: default;
+    transition: color 0.2s ease;
+}
+
+/* ====================================================================
+   15. FORM PAGE STYLES
+   ====================================================================
+   Interactive form page styling including quote banner and form elements
+*/
+
+/* Quote Banner */
+.quote-banner {
+    background-color: var(--light-green);
+    border: 2px solid #e2e8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.quote-banner:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+/* Profile Image */
+.profile-image {
+    border: 3px solid #059669;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: border-color 0.3s ease;
+    max-width: 150px;
+    height: auto;
+}
+
+.profile-image:hover {
+    border-color: #16a085;
+}
+
+/* Quote Text Styling */
+.quote-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #2d3748;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.quote-text::before {
+    content: '"';
+    font-size: 2.5rem;
+    color: #059669;
+    font-family: Georgia, serif;
+    font-weight: bold;
+}
+
+.quote-text::after {
+    content: '"';
+    font-size: 2.5rem;
+    color: #059669;
+    font-family: Georgia, serif;
+    font-weight: bold;
+}
+
+/* Quote Attribution */
+.person-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.person-title {
+    font-size: 0.95rem;
+    color: #4a5568;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Climate Form Styling */
+#climateForm {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #212529;
+}
+
+#climateForm h2 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#climateForm input[type="text"],
+#climateForm input[type="email"],
+#climateForm select,
+#climateForm textarea {
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+#climateForm input:focus,
+#climateForm select:focus,
+#climateForm textarea:focus {
+    border-color: #198754;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+
+#climateForm label {
+    font-weight: 500;
+}
+
+#climateForm .form-check-input {
+    cursor: pointer;
+}
+
+#climateForm .form-check-label {
+    margin-left: 0.25rem;
+}
+
+#climateForm button[type="submit"] {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #212529;
+    background-color: transparent;
+}
+
+#climateForm button[type="submit"]:hover {
+    background-color: #198754;
+    color: #fff;
+    border-color: #198754;
+}
+
+/* Confirmation Offcanvas */
+#confirmationOffcanvas {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9fbe7;
+    color: #1c3f2c;
+    border-top: 2px solid #198754;
+}
+
+#confirmationOffcanvas .offcanvas-title {
+    font-weight: 600;
+    color: #14532d;
+}
+
+#confirmationOffcanvas .offcanvas-body {
+    font-size: 1.05rem;
+}
+.form-control:valid, .form-control.is-valid, .form-control:invalid, .form-control.is-invalid, .form-select:valid, .form-select.is-valid,.form-select:invalid, .form-select.is-invalid{
+    background-image: none !important;
+}
+
+/* ====================================================================
+   16. FOOTER STYLES
+   ====================================================================
+   Site footer with contact information and back-to-top functionality
+*/
+.footer {
+    border-top: 3px solid #9FE2BF;
+    background-color: var(--dark-gray);
+    color: white;
+    font-weight: 600;
+}
+
+.footer h3 {
+    color: white;
+    border: none;
+    font-size: 1.25rem;
+}
+
+.footer a {
+    color: #9FE2BF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* ====================================================================
+   17. POPUP MODAL STYLES
+   ====================================================================
+   Advertisement popup modal styling and animations
+*/
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #666;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.popup a button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup a button:hover {
+    background-color: #218838;
+}

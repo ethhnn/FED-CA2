@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- ====================================================================
+         META INFORMATION & PAGE SETUP
+         ====================================================================
+         Essential meta tags, viewport settings, and page title
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sustainability and Climate Action : Informational</title>
+    
+    <!-- ====================================================================
+         EXTERNAL STYLESHEETS & DEPENDENCIES
+         ====================================================================
+         Bootstrap CSS framework, icons, and Popper.js for interactive components
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    
+    <!-- ====================================================================
+         CUSTOM STYLES
+         ====================================================================
+         Site-specific styling
+    -->
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  
+  <body>
+    <!-- ====================================================================
+         NAVIGATION SECTION
+         ====================================================================
+         Main site navigation with responsive mobile toggle
+    -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid ">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="#">
+          <i class="bi bi-leaf-fill"></i>
+          EcoFuture
+        </a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="../html/index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="../html/informational.html">Information</a>
+            <a class="nav-link" href="../html/interactiveform.html">Form</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- ====================================================================
+         HERO BANNER SECTION
+         ====================================================================
+         Page header with title, description, and call-to-action buttons
+    -->
+    <header class="py-5 indexbanner text-center ">
+      <h1><b>Understand the <span class="highlight">Science </span>and <span class="highlight">Solution</span> behind climate change.</b></h1>
+      <p>The fight for a sustainable future is not won alone — it begins when we each choose to stand together, act boldly, and protect the planet we all share.</p>
+      <a href="index.html" class="btn btn-light mt-3"><b>Our Misson</b></a>
+      <a href="interactiveform.html" class="btn btn-light mt-3"><b>Join Us Now</b></a>
+    </header>
+    
+    <!-- ====================================================================
+         TAB NAVIGATION SECTION
+         ====================================================================
+         Main content tabs to switch between Insights and Solutions
+    -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Insights</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Solutions</button>
+      </li>
+    </ul>
+    
+    <!-- ====================================================================
+         TAB CONTENT SECTIONS
+         ====================================================================
+         Main content area with tabbed information panels
+    -->
+    <div class="tab-content" id="myTabContent">
+      <!-- ====================================================================
+           INSIGHTS TAB - Climate Action Data and Statistics
+           ====================================================================
+      -->
+      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        
+        <!-- Climate-Action Insights Overview -->
+        <div class="container py-5">
+          <div class="text-center mb-5">
+            <h2>Climate-Action Insights</h2>
+            <h3>Here are some information on the state of our planet</h3>
+          </div>
+          
+          <!-- Climate Facts Cards Grid -->
+          <div class="row mb-5 stats">
+            <!-- Problem Card - Climate Change Facts -->
+            <div class="col-lg-4 mb-4">
+              <div class="card h-100">
+                <div class="card-header">
+                  <h4 class="mb-0">🌍 The Problem</h4>
+                </div>
+                <div class="card-body">
+                  <h5>Climate Change Facts</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">Global temperatures rising fastest in 2,000 years</li>
+                    <li class="mb-2">Arctic ice melting at 13% per decade</li>
+                    <li class="mb-2">Sea levels rising 3.3mm annually</li>
+                    <li class="mb-2">Extreme weather events increasing</li>
+                    <li class="mb-2">Biodiversity loss accelerating</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Solutions Card - Renewable Energy -->
+            <div class="col-lg-4 mb-4">
+              <div class="card h-100">
+                <div class="card-header">
+                  <h4 class="mb-0">⚡ Solutions</h4>
+                </div>
+                <div class="card-body">
+                  <h5>Renewable Energy</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">Solar power costs dropped 85% since 2010</li>
+                    <li class="mb-2">Wind energy now cheapest in many regions</li>
+                    <li class="mb-2">Battery storage improving rapidly</li>
+                    <li class="mb-2">Electric vehicle adoption growing</li>
+                    <li class="mb-2">Green building standards expanding</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Progress Card - Global Achievements -->
+            <div class="col-lg-4 mb-4">
+              <div class="card h-100">
+                <div class="card-header">
+                  <h4 class="mb-0">📈 Progress</h4>
+                </div>
+                <div class="card-body">
+                  <h5>Global Achievements</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">195 countries signed Paris Agreement</li>
+                    <li class="mb-2">11,000+ cities committed to net-zero</li>
+                    <li class="mb-2">Major corporations going carbon neutral</li>
+                    <li class="mb-2">Reforestation projects worldwide</li>
+                    <li class="mb-2">Youth climate movement growing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- ====================================================================
+             CLIMATE IMPACT NUMBERS SECTION
+             ====================================================================
+             Animated statistics cards with count-up functionality
+        -->
+        <div class="statstwo py-4">
+          <div class="text-center mb-5">
+            <h2>Climate Impact Numbers</h2>
+            <h3>These numbers are rising, we must take action</h3>
+          </div>
+          <div class="container text-center">
+            <!-- First Row of Statistics -->
+            <div class="row mb-4">
+              <!-- Hottest Year Record -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                  <img src="../pictures/sun.jpg" class="card-img-top" alt="sun"><!--https://www.pexels.com/photo/sun-301599/-->
+                  <div class="card-body">
+                    <h5 class="card-title">2023</h5>
+                    <p class="card-text">Hottest year on record globally</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Sea Level Rise -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                  <img src="../pictures/sea.jpg" class="card-img-top" alt="sea"><!--https://www.pexels.com/photo/body-of-water-during-golden-hour-189349/-->
+                  <div class="card-body">
+                    <h5 class="card-title"><span class="count">21</span><span class="unit">cm</span></h5>
+                    <p class="card-text">Sea level rise since 1880</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Arctic Ice Decline -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                  <img src="../pictures/arctic.jpg" class="card-img-top" alt="ice"><!--https://www.pexels.com/photo/icebergs-2229887/-->
+                  <div class="card-body">
+                    <h5 class="card-title"><span class="count">75</span><span class="unit">%</span></h5>
+                    <p class="card-text">Arctic ice decline since 1979</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Second Row of Statistics -->
+            <div class="row">
+              <!-- Wildlife Population Decline -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                  <img src="../pictures/wildlife.jpg" class="card-img-top" alt="wildlife"><!--https://www.pexels.com/photo/photo-of-a-turtle-swimming-underwater-847393/-->
+                  <div class="card-body">
+                    <h5 class="card-title"><span class="count">68</span><span class="unit">%</span></h5>
+                    <p class="card-text">Wildlife population decline since 1970</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Global Temperature Increase -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                  <img src="../pictures/temp.jpg" class="card-img-top" alt="temp"><!--https://www.pexels.com/photo/close-up-shot-of-a-thermometer-4022769/-->
+                  <div class="card-body">
+                    <h5 class="card-title"><span class="count">1.2</span><span class="unit">°C</span></h5>
+                    <p class="card-text">increase in Global Temperature since pre-industrial times</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Extreme Weather Disasters -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                  <img src="../pictures/tornado.jpg" class="card-img-top" alt="disaster"><!--https://www.pexels.com/photo/tornado-on-body-of-water-during-golden-hour-1119974/-->
+                  <div class="card-body">
+                    <h5 class="card-title"><span class="count">5</span><span class="unit">X</span></h5>
+                    <p class="card-text">more extreme weather disaster since 1970</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- ====================================================================
+             REGIONAL CLIMATE IMPACTS SECTION
+             ====================================================================
+             Geographic breakdown of climate effects by region
+        -->
+        <div class="regional-impacts container py-4">
+          <div class="text-center mb-5">
+            <h2>Regional Climate Impacts</h2>
+          </div>
+          <div class="row g-4">
+            <!-- Asia-Pacific Region -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card h-100">
+                <div class="card-header">
+                  Asia-Pacific
+                </div>
+                <div class="card-body">
+                  <ul class="mb-0">
+                    <li><strong>Heat Waves:</strong> Record temperatures in India and Australia</li>
+                    <li><strong>Monsoon Changes:</strong> Unpredictable rainfall patterns</li>
+                    <li><strong>Glacier Melt:</strong> Himalayan glaciers retreating rapidly</li>
+                    <li><strong>Sea Level Rise:</strong> Threatening Pacific island nations</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Africa Region -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card h-100">
+                <div class="card-header">
+                  Africa
+                </div>
+                <div class="card-body">
+                  <ul class="mb-0">
+                    <li><strong>Desertification:</strong> Sahara expanding southward</li>
+                    <li><strong>Water Scarcity:</strong> Droughts affecting 400M people</li>
+                    <li><strong>Agriculture:</strong> Crop yields declining in many regions</li>
+                    <li><strong>Migration:</strong> Climate refugees increasing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Europe Region -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card h-100">
+                <div class="card-header">
+                  Europe
+                </div>
+                <div class="card-body">
+                  <ul class="mb-0">
+                    <li><strong>Wildfires:</strong> Mediterranean regions at high risk</li>
+                    <li><strong>Alpine Changes:</strong> Ski seasons shortening</li>
+                    <li><strong>Storm Intensity:</strong> Stronger Atlantic storms</li>
+                    <li><strong>Ecosystems:</strong> Species migrating northward</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Americas Region -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card h-100">
+                <div class="card-header">
+                  Americas
+                </div>
+                <div class="card-body">
+                  <ul class="mb-0">
+                    <li><strong>Hurricanes:</strong> More intense Atlantic storms</li>
+                    <li><strong>Amazon:</strong> Rainforest approaching tipping point</li>
+                    <li><strong>Arctic:</strong> Permafrost melting in Alaska/Canada</li>
+                    <li><strong>Heat Domes:</strong> Record temperatures in North America</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- ====================================================================
+             GLOBAL SUCCESS STORIES SECTION
+             ====================================================================
+             Interactive world map with clickable hotspots showing climate victories
+        -->
+        <section class="global-success py-4">
+          <div class="container">
+            <div class="text-center mb-5">
+              <h2>Global Success Stories</h2>
+            </div>
+            <div class="row">
+              <!-- Interactive World Map -->
+              <div class="col-md-7 position-relative" style="min-height: 400px;">
+                <img
+                  src="../pictures/World_map.png"
+                  alt="World Map"
+                  class="img-fluid"
+                > <!--https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1280px-World_map_-_low_resolution.svg.png-->
+
+                <!-- Clickable Hotspots -->
+                <button class="hotspot hotspot-costa-rica" data-country="costa-rica" type="button" aria-label="Costa Rica"></button>
+                <button class="hotspot hotspot-denmark" data-country="denmark" type="button" aria-label="Denmark"></button>
+                <button class="hotspot hotspot-copenhagen" data-country="copenhagen" type="button" aria-label="Copenhagen"></button>
+                <button class="hotspot hotspot-ethiopia" data-country="ethiopia" type="button" aria-label="Ethiopia"></button>
+                <button class="hotspot hotspot-morocco" data-country="morocco" type="button" aria-label="Morocco"></button>
+              </div>
+
+              <!-- Information Display Panel -->
+              <div class="col-md-5">
+                <div id="details" tabindex="0">
+                  <h4>Click a hotspot on the map</h4>
+                  <p>Select a country or city to see its climate success story.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <!-- ====================================================================
+           SOLUTIONS TAB - Future Technologies and Action Plans
+           ====================================================================
+      -->
+      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <div class="future p-4">
+          <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mb-5">
+              <h2>Future Developments & Breakthrough Technologies</h2>
+              <h3>How we are and can combat this issue</h3>
+            </div>
+
+            <!-- ====================================================================
+                 EMERGING TECHNOLOGIES AND POLICY SECTION
+                 ====================================================================
+            -->
+            <div class="row mb-5">
+              <!-- Emerging Technologies Card -->
+              <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h4 class="card-title mb-3">Emerging Technologies</h4>
+                    <ul class="mb-0">
+                      <li>Carbon Capture &amp; Storage: Direct air capture technology scaling up globally, with facilities removing 40Mt CO2 annually by 2030</li>
+                      <li>Green Hydrogen: Clean fuel for heavy industry and transport, with production costs expected to drop 50% by 2030</li>
+                      <li>Fusion Energy: Breakthrough experiments showing net energy gain, commercial plants possible by 2040s</li>
+                      <li>Advanced Nuclear: Small modular reactors and next-gen designs providing safe, carbon-free baseload power</li>
+                      <li>Artificial Photosynthesis: Technology mimicking plants to convert CO2 and water into fuel using sunlight</li>
+                    </ul>
+                    <img src="../pictures/tech.jpg" alt="techparts" class="img-fluid rounded mx-auto mt-4"><!--https://www.pexels.com/photo/blue-and-yellow-phone-modules-1476321/-->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Policy & Finance Initiatives Card -->
+              <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h4 class="card-title mb-3">Policy &amp; Finance Initiatives</h4>
+                    <ul class="mb-0">
+                      <li>Carbon Pricing: 75+ carbon pricing initiatives covering 23% of global emissions, expanding rapidly</li>
+                      <li>Green Finance: $5.2 trillion invested in clean energy transition by 2030, with $100T needed by 2050</li>
+                      <li>30x30 Initiative: Protecting 30% of Earth's land and oceans by 2030 for biodiversity conservation</li>
+                      <li>Corporate Net-Zero: 5,000+ companies committed to science-based targets, representing $70T in market cap</li>
+                      <li>EU Green Deal: €1 trillion investment plan to make Europe climate-neutral by 2050</li>
+                    </ul>
+                    <img src="../pictures/policy.jpg" alt="policy" class="img-fluid rounded mx-auto mt-4 "><!--https://www.pexels.com/photo/selective-focus-photo-of-terms-and-conditions-written-on-a-paper-7821937/-->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ====================================================================
+                 CLIMATE INNOVATION TIMELINE
+                 ====================================================================
+            -->
+            <div class="text-center mb-5">
+              <h2>Climate Innovation Timeline</h2>
+            </div>
+
+            <div class="row mb-5">
+              <!-- 2025-2027 Timeline -->
+              <div class="col-md-3 mb-3">
+                <div class="card h-100 p-3">
+                  <strong>2025-2027</strong>
+                  <p>Grid-scale batteries become cost-competitive worldwide</p>
+                </div>
+              </div>
+              
+              <!-- 2028-2030 Timeline -->
+              <div class="col-md-3 mb-3">
+                <div class="card h-100 p-3">
+                  <strong>2028-2030</strong>
+                  <p>Green hydrogen reaches price parity with fossil fuels</p>
+                </div>
+              </div>
+              
+              <!-- 2030-2035 Timeline -->
+              <div class="col-md-3 mb-3">
+                <div class="card h-100 p-3">
+                  <strong>2030-2035</strong>
+                  <p>Carbon removal scales to gigatonne levels annually</p>
+                </div>
+              </div>
+              
+              <!-- 2040+ Timeline -->
+              <div class="col-md-3 mb-3">
+                <div class="card h-100 p-3">
+                  <strong>2040+</strong>
+                  <p>Fusion power begins commercial deployment</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ====================================================================
+                 INDIVIDUAL ACTION SECTION
+                 ====================================================================
+            -->
+            <div class="text-center mb-5">
+              <h2>What YOU can do</h2>
+              <h3>Everyone Plays A Part</h3>
+            </div>
+
+            <div class="row">
+              <!-- At Home Actions Card -->
+              <div class="col-md-4 mb-4">
+                <div class="card h-100 p-3">
+                  <h4>At Home</h4>
+
+                  <h5>Energy &amp; Efficiency</h5>
+                  <ul>
+                    <li>Switch to renewable energy supplier</li>
+                    <li>Install solar panels (25-year payback)</li>
+                    <li>Upgrade to LED bulbs (80% energy saving)</li>
+                    <li>Improve insulation (30% heating cost reduction)</li>
+                    <li>Use smart thermostats</li>
+                  </ul>
+
+                  <h5>Water &amp; Waste</h5>
+                  <ul>
+                    <li>Install low-flow fixtures</li>
+                    <li>Compost organic waste (30% waste reduction)</li>
+                    <li>Reduce single-use plastics</li>
+                    <li>Recycle properly</li>
+                  </ul>
+
+                  <h5>Transportation</h5>
+                  <ul>
+                    <li>Sustainable Mobility</li>
+                    <li>Walk, bike, or use public transit</li>
+                    <li>Consider electric vehicles (90% lower emissions)</li>
+                    <li>Carpool or rideshare</li>
+                    <li>Work from home 2-3 days/week</li>
+                    <li>Combine errands into single trips</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Travel Choices Card -->
+              <div class="col-md-4 mb-4">
+                <div class="card h-100 p-3">
+                  <h4>Travel Choices</h4>
+                  <ul>
+                    <li>Choose trains over flights when possible</li>
+                    <li>Offset unavoidable flights</li>
+                    <li>Vacation locally (staycations)</li>
+                    <li>Video conference instead of business travel</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Community & Advocacy Card -->
+              <div class="col-md-4 mb-4">
+                <div class="card h-100 p-3">
+                  <h4>Community &amp; Advocacy</h4>
+
+                  <h5>Political Action</h5>
+                  <ul>
+                    <li>Vote for climate-conscious leaders</li>
+                    <li>Contact representatives about climate policy</li>
+                    <li>Join local environmental groups</li>
+                    <li>Attend town halls and climate rallies</li>
+                    <li>Support renewable energy initiatives</li>
+                  </ul>
+
+                  <h5>Social Impact</h5>
+                  <ul>
+                    <li>Support sustainable businesses</li>
+                    <li>Educate friends and family</li>
+                    <li>Share climate content on social media</li>
+                    <li>Divest from fossil fuel investments</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ====================================================================
+         FOOTER SECTION
+         ====================================================================
+         Site footer with contact information and navigation
+    -->
+    <footer class="footer pt-4 pb-4">
+      <div class="container">
+        <div class="row text-center align-items-center">
+          <!-- Company Motto -->
+          <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <h5 class="fw-bold">Our Motto</h5>
+            <p class="mb-0">Waste Less - Live More</p>
+          </div>
+
+          <!-- Back to Top Button -->
+          <div class="col-12 col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
+            <button class="btn btn-light" id="backToTopBtn">Back to Top</button>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold">Contact</h5>
+            <p class="mb-1">&copy; Ethan Chuwa Si Xuan</p>
+            <p class="mb-0">ethanchuwa03.25@ichat.sp.edu.sg</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- ====================================================================
+         JAVASCRIPT DEPENDENCIES & CUSTOM SCRIPTS
+         ====================================================================
+         External libraries and custom functionality
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  </body>
+</html>
